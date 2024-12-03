@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery X - Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="icon" type="image/png" href="../images/logo.png">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../images/logo.png" alt="Delivery X Logo">
+                <h2>Delivery X</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active">
+                        <a href="#" data-section="dashboard">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="branch">
+                            <i class="fas fa-building"></i>
+                            <span>Branch</span>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#" data-section="add-branch">Add New</a></li>
+                            <li><a href="#" data-section="list-branch">List</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" data-section="staff">
+                            <i class="fas fa-users"></i>
+                            <span>Branch Staff</span>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#" data-section="add-staff">Add New</a></li>
+                            <li><a href="#" data-section="list-staff">List</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" data-section="parcels">
+                            <i class="fas fa-box"></i>
+                            <span>Parcels</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="reports">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Reports</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header>
+                <div class="header-content">
+                    <h1>Courier Management System</h1>
+                    <div class="user-info">
+                        <span id="username">Admin</span>
+                        <button id="logoutBtn" class="logout-btn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="content-area">
+                <!-- Stats Cards -->
+                <div class="stats-cards">
+                    <div class="card pink">
+                        <div class="card-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Total Branches</h3>
+                            <p id="totalBranches">0</p>
+                        </div>
+                    </div>
+                    <div class="card green">
+                        <div class="card-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Total Parcels</h3>
+                            <p id="totalParcels">0</p>
+                        </div>
+                    </div>
+                    <div class="card blue">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Total Staff</h3>
+                            <p id="totalStaff">0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="charts-section">
+                    <!-- Parcels Status Table -->
+                    <div class="status-table">
+                        <h3>Daily Activities</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Sr No</th>
+                                    <th>Status</th>
+                                    <th>Count</th>
+                                </tr>
+                            </thead>
+                            <tbody id="statusTableBody">
+                                <!-- Populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Pie Chart -->
+                    <div class="chart-container">
+                        <canvas id="statusPieChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>

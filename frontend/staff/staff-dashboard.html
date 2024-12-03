@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery X - Staff Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="staff.css">
+    <link rel="icon" type="image/png" href="../images/logo.png">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../images/logo.png" alt="GaatiTrack Logo">
+                <h2>Express X</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active">
+                        <a href="#" data-section="add-parcel">
+                            <i class="fas fa-plus-circle"></i>
+                            <span>Add Parcel</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="parcels">
+                            <i class="fas fa-box"></i>
+                            <span>Parcels</span>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#" data-section="list-parcels">List All</a></li>
+                           
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" data-section="update-status">
+                            <i class="fas fa-edit"></i>
+                            <span>Update Status</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header>
+                <div class="header-content">
+                    <h1>Courier Management System</h1>
+                    <div class="user-info">
+                        <span id="staffName">Staff Member</span>
+                        <button id="logoutBtn" class="logout-btn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+    <script src="staff.js"></script>
+</body>
+</html>
